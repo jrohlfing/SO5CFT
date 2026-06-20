@@ -1,0 +1,110 @@
+{
+  "deliverable_A": {
+    "n5": {
+      "file": "so5sym_L96_chi1200.json",
+      "L": 96,
+      "chi": 1200,
+      "S_Lhalf": 2.3453761124893804,
+      "lowest_multiplet": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lowest_deg": 5,
+      "zero_weight_present": true,
+      "shell_degeneracies": [
+        5,
+        10,
+        5,
+        35,
+        5,
+        10
+      ]
+    },
+    "n4": {
+      "file": "so4_L96_prod.json",
+      "L": 96,
+      "chi": 999999,
+      "S_Lhalf": 1.831635415040049,
+      "lowest_multiplet": [
+        [
+          -1,
+          0
+        ],
+        [
+          0,
+          -1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "lowest_deg": 4,
+      "zero_weight_present": false,
+      "shell_degeneracies": [
+        4,
+        8,
+        16,
+        4,
+        8,
+        16
+      ]
+    },
+    "distinct_towers": true,
+    "pass": true
+  },
+  "deliverable_B": {
+    "vector_multiplet_eps": [
+      0.0,
+      1e-05,
+      2e-05,
+      4e-05,
+      5e-05
+    ],
+    "vector_multiplet_spread": 4.7410246936330225e-05,
+    "so5_degeneracy_intact": true,
+    "shell0_irrep": "vector (5)",
+    "shell1_irrep": "adjoint (10)",
+    "shell_degeneracies": [
+      5,
+      10,
+      5,
+      35,
+      5,
+      10
+    ],
+    "ising5_binomial": [
+      1,
+      5,
+      10,
+      10,
+      5,
+      1
+    ],
+    "twist_1_8_projected_out": true,
+    "spinor_5_8_in_ES": false,
+    "spinor_note": "integer-weight vector chain carries only integer Cartan charges; the Delta_s=5/8 spinor (half-integer charges) is not exposed in this representation. Reported inaccessible via ES per pre-registration; would require the 4-dim spinor-rep chain or a twist-field correlator."
+  }
+}

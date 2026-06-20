@@ -1,0 +1,5 @@
+category,model_or_dataset,condition,subject_or_param,c_eff,r2,accepted,n_pts,window_low,window_high
+positive,xx_chain,,,0.9825,0.9981,True,6,0.10,0.50
+positive,tfim_gapped,,,0.0000,0.4782,False,6,0.10,0.50
+positive,tfim_critical,,,0.5051,1.0000,True,6,0.10,0.50
+positive,potts3_critical,,,0.8246,1.0000,True,6,0.10,0.50
