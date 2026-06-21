@@ -50,7 +50,7 @@ two Cartan $U(1)$s, complementing the free-Majorana realization above:
   Heisenberg point, with its only nearest-neighbor critical point at
   $\theta=\arctan(1/3)$ being the enhanced-symmetry SU(4)$_1$ ($c=3$, fundamental
   at $\Delta=3/4$) rather than SO(5)$_1$ — so the SO(5)$_1$ spinor is best obtained
-  from the twist/free-Majorana route, not a native spinor chain.
+  from the twist/free-Majorana route, not a native spinor chain. A many-body exact diagonalization of the genuine (antiperiodic-Majorana) twisted sector resolves the $n=5$ ground directly as $2\times(1+5+10)=\mathbf{4}\otimes\mathbf{4}$, the SO(5)=Sp(4) spinor tensor square, with no bare $C_2=5/2$ spinor; the SO(5)-invariant coupling splits this manifold in energy but preserves the content. This is the direct lattice measurement behind the third establishment of the spinor in Section 4.3 (`so5_twisted_sector_ed.py`, `results/twisted_sector_ed.json`).
 
 See `symmetric-dmrg/REPORT-matched-tower.md` and
 `symmetric-dmrg/REPORT-spinor-sector.md` for the full tables and verdicts.
@@ -63,7 +63,8 @@ analysis/      run_so5.py, run_so5_phase.py (drivers); c_eff.py, dmrg_parallel.p
 results/so5/   results_so5.json, gap_ratio_table.csv, phase/ (minE grids, results_phase.json)
 figures/       fig1.png, fig2.png, fig3.png, make_figs.py (regenerates all three from results/)
 symmetric-dmrg/  SO(5)-symmetric BBQ DMRG: matched SO(5)/Spin(4) tower + spinor sector
-                 (code, results/*.json, REPORT-matched-tower.md, REPORT-spinor-sector.md)
+                 (code incl. so5_twisted_sector_ed.py, results/*.json,
+                 REPORT-matched-tower.md, REPORT-spinor-sector.md)
 MODEL-DERIVATION.md     exact Hamiltonian, SO(5) generators, pre-registered targets
 RESULTS-SO5-LATTICE.md  the four tests with verdicts
 RESULTS-SO5-PHASE.md    the (mu,w) phase scan
@@ -76,6 +77,7 @@ pip install -r requirements.txt
 python -m analysis.run_so5          # tests 1-3, writes results/so5/results_so5.json
 python -m analysis.run_so5_phase    # phase scan, writes results/so5/phase/
 python figures/make_figs.py         # regenerates fig1.png, fig2.png, fig3.png from results/
+python symmetric-dmrg/so5_twisted_sector_ed.py   # twisted-sector ED (Sec 4.3), writes results/twisted_sector_ed.json
 ```
 
 The committed `results/` JSON and CSV files are the outputs used in the paper;

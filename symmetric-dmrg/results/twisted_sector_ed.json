@@ -1,0 +1,75 @@
+{
+  "validation_all_ramond_M4": {
+    "1": {
+      "ground_deg": 2,
+      "expected_2pow_n": 2,
+      "E0": -2.0
+    },
+    "2": {
+      "ground_deg": 4,
+      "expected_2pow_n": 4,
+      "E0": -4.0
+    },
+    "3": {
+      "ground_deg": 8,
+      "expected_2pow_n": 8,
+      "E0": -6.000000000000001
+    },
+    "4": {
+      "ground_deg": 16,
+      "expected_2pow_n": 16,
+      "E0": -8.000000000000004
+    },
+    "5": {
+      "ground_deg": 32,
+      "expected_2pow_n": 32,
+      "E0": -10.000000000000012
+    }
+  },
+  "n5_twisted_ground": {
+    "ground_deg": 32,
+    "E0": -10.000000000000012,
+    "casimir_content": [
+      {
+        "C2": 0.0,
+        "deg": 2,
+        "irrep": "singlet"
+      },
+      {
+        "C2": 4.0,
+        "deg": 10,
+        "irrep": "vector"
+      },
+      {
+        "C2": 6.0,
+        "deg": 20,
+        "irrep": "adjoint"
+      }
+    ],
+    "bare_spinor_C2_2p5_present": false,
+    "decomposition": "2 x (1 + 5 + 10) = 2 x (spinor (x) spinor); 4(x)4=1+5+10 for Sp(4)"
+  },
+  "n5_twisted_manifold_interacting_g0p5": {
+    "k": 32,
+    "manifold_energy_span": 1.536,
+    "gap_to_next": 3.3988,
+    "casimir_content": [
+      {
+        "C2": 0.0,
+        "deg": 2,
+        "irrep": "singlet"
+      },
+      {
+        "C2": 4.0,
+        "deg": 10,
+        "irrep": "vector"
+      },
+      {
+        "C2": 6.0,
+        "deg": 20,
+        "irrep": "adjoint"
+      }
+    ],
+    "bare_spinor_C2_2p5_present": false
+  }
+}
