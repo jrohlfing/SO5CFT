@@ -17,7 +17,7 @@ SCRIPT = THIS_DIR / "so4_bbq_dmrg_sym.py"
 RES = THIS_DIR / "results"
 LOG = RES / "so4_ladder.log"
 GATE = 0.005
-THREADS = int(os.environ.get("STAEDERT_THREADS_PER_WORKER", "16"))
+THREADS = int(os.environ.get("DMRG_THREADS_PER_WORKER", "16"))
 
 # L -> list of chi to try (ascending); stop when S(L/2) gate met vs previous chi.
 LADDER = {
@@ -45,7 +45,7 @@ def run_point(L, chi):
     if (RES / f"{tag}.json").exists():
         log(f"SKIP {tag} (exists S={s_half(tag):.5f})")
         return s_half(tag)
-    env = dict(os.environ, STAEDERT_THREADS_PER_WORKER=str(THREADS))
+    env = dict(os.environ, DMRG_THREADS_PER_WORKER=str(THREADS))
     t0 = time.time()
     log(f"START {tag} ({THREADS} threads, chi-ramp)")
     proc = subprocess.run(

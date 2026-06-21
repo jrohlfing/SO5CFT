@@ -51,6 +51,6 @@ python so5_spinor_dmrg.py --mode validate    # spinor-rep build + theta=0 dimeri
 python so5_spinor_critical.py --Ls 32        # SU(4)_1 critical point at arctan(1/3)
 ```
 
-Thread count is set by `STAEDERT_THREADS_PER_WORKER` (default 16/30). The
+Thread count is set by `DMRG_THREADS_PER_WORKER` (default 16/30). The
 free-twist step is exact and instant; the DMRG steps are the costly ones
 (the critical-point convergence is the slowest).

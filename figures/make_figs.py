@@ -81,3 +81,38 @@ plt.tight_layout()
 plt.savefig("figures/fig2.png", dpi=200)
 plt.close()
 print("fig2 written")
+
+# ----- Figure 3: matched entanglement-spectrum tower (from symmetric-dmrg) -----
+MT = json.load(open(f"{REPO}/symmetric-dmrg/results/matched_tower.json"))
+A = MT["deliverable_A"]
+fig, (ax5, ax4) = plt.subplots(1, 2, figsize=(11, 4.4), sharey=True)
+for key, title, ax, shell_col in [
+        ("n5", r"$SO(5)_1$  ($n=5$, odd)", ax5, "#1f3a93"),
+        ("n4", r"$Spin(4)_1$  ($n=4$, even)", ax4, "#d08010")]:
+    d = A[key]
+    degs = d["shell_degeneracies"][:2]          # [lowest, next], read not hardcoded
+    zw = d["zero_weight_present"]
+    for level, deg in enumerate(degs):          # level 0 = lowest, 1 = next
+        xs = np.arange(deg) - (deg - 1) / 2.0
+        for j, x in enumerate(xs):
+            fc = "none"
+            if level == 0 and zw and j == deg // 2:
+                fc = "#b03030"                  # filled = zero-weight singlet
+            ax.scatter(x, level, s=95, marker="o", edgecolors=shell_col,
+                       facecolors=fc, linewidths=1.5, zorder=3)
+        ax.text(0, level + 0.18, f"{deg}-fold", ha="center", fontsize=8,
+                color=shell_col)
+    ann = "zero-weight singlet present" if zw else "no zero-weight state"
+    ax.annotate(ann, xy=(0, 0), xytext=(0, -0.5), ha="center", fontsize=8.5,
+                color=("#b03030" if zw else "#555"))
+    ax.set_title(title)
+    ax.set_xlabel("SO weight multiplet")
+    ax.set_ylim(-0.8, 1.6)
+    ax.set_yticks([0, 1]); ax.set_yticklabels(["lowest", "next"])
+    ax.grid(True, axis="y", alpha=0.25)
+ax5.set_ylabel("entanglement level / shell")
+fig.suptitle("Matched entanglement-spectrum tower (Reshetikhin point, N=96)")
+plt.tight_layout(rect=[0, 0, 1, 0.94])
+plt.savefig("figures/fig3.png", dpi=200)
+plt.close()
+print("fig3 written")

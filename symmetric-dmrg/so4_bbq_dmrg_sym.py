@@ -1,6 +1,6 @@
 """SO(4) bilinear-biquadratic chain at the Reshetikhin point -- CHARGE-CONSERVING
 DMRG. The EVEN-parity control for the matched SO(5)_1 vs Spin(4)_1 entanglement
-tower comparison (Staedert handoff: "The Real Result").
+tower comparison.
 
 This is the n=4 sibling of so5_bbq_dmrg_sym.py, built on the identical
 charge-conserving framework so the two entanglement spectra come off the SAME
@@ -50,7 +50,7 @@ import os
 import time
 from pathlib import Path
 
-THREADS = int(os.environ.get("STAEDERT_THREADS_PER_WORKER", "30"))
+THREADS = int(os.environ.get("DMRG_THREADS_PER_WORKER", "30"))
 for _v in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS",
            "VECLIB_MAXIMUM_THREADS", "NUMEXPR_NUM_THREADS"):
     os.environ[_v] = str(THREADS)

@@ -1,7 +1,7 @@
-"""Generate REPORT-matched-tower.md from the committed n=5 ES and the n=4 ES
-produced this handoff. Single source of truth for the shell extraction is
-so_matched_tower.py. Emits markdown tables + verdicts for Deliverables A & B and
-the Task 5 decision. No time estimates; full provenance.
+"""Generate REPORT-matched-tower.md from the committed n=5 ES and the n=4 ES.
+Single source of truth for the shell extraction is so_matched_tower.py. Emits
+markdown tables + verdicts for Deliverables A & B and the overall decision.
+Full provenance.
 """
 from __future__ import annotations
 
@@ -85,12 +85,11 @@ def main():
     spread = max(vec_eps) - min(vec_eps)
     twist_out = spread < 1e-3
 
-    md = f"""# The Real Result: Matched SO(5)_1 vs Spin(4)_1 Entanglement Tower
+    md = f"""# Matched SO(5)_1 vs Spin(4)_1 Entanglement Tower
 
-**Branch:** `lagrangian/c5over2-derivation`
 **Pipeline:** charge-conserving (two Cartan U(1)) DMRG, TeNPy, OBC, half-chain cut.
-**Status:** numerical partner to the reframed paper's parity headline. The floor
-paper does not depend on this; this is the Section-4 *upgrade*.
+**Status:** entanglement-spectrum comparison supporting the Section-4 parity
+result; the central-charge determination does not depend on it.
 
 ## What is new
 
@@ -173,7 +172,7 @@ The coupled SO(5)_1 point is a genuinely interacting critical theory (theta=arct
    or a twist-field correlator, not a reading of this chain's ES. No spinor claim
    is made beyond the data.
 
-## Task 5 -- decision
+## Summary
 
 Deliverable A gives a **clean matched tower distinction**: the SO(5)_1 vector
 multiplet (5, with (0,0)) versus the Spin(4)_1 vector multiplet (4, no (0,0)),
@@ -183,14 +182,13 @@ paper's parity headline, invisible to the equal TEE. Deliverable B exhibits the
 Ising^5), with the spinor-at-5/8 part honestly reported as inaccessible in the
 vector representation.
 
-**UPGRADE SUPPORTED.** Section 4 gains a real, non-reproductive result: the
-SO(5)_1 vs Spin(4)_1 distinction shown directly in the entanglement spectrum, not
-only the class-D edge. The floor paper stands unchanged regardless.
+**Result.** Section 4 gains the SO(5)_1 vs Spin(4)_1 distinction shown directly
+in the entanglement spectrum, not only the class-D edge.
 
 ## Provenance
 
 - n=5 ground state: `{so5_path.name}` (committed; prior symmetric campaign).
-- n=4 model + runs: `so4_bbq_dmrg_sym.py`, `so4_run_ladder.py` (this handoff).
+- n=4 model + runs: `so4_bbq_dmrg_sym.py`, `so4_run_ladder.py`.
 - Matched analysis: `so_matched_tower.py` -> `results/matched_tower.json`.
 - c-check: `extract_c_so4.py` -> `results/so4_c_check.json`.
 - theta_R derivation: log-derivative of ZF O(n) R-matrix; verified tan=1/9 at n=5.

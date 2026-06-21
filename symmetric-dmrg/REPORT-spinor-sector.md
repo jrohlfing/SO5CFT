@@ -6,7 +6,7 @@
 feasibility). Tasks C (interacting twist) and B (disorder correlator) are assessed
 with a concrete path and obstruction; they are the harder remaining steps and were
 not executed this round. The paper's spinor-at-5/8 claim is fully backed by the
-free-theory result below, per the handoff's own decision rule.
+free-theory result below, per the pre-registered decision rule.
 
 The SO(5)_1 spinor primary: chiral weight h = 5/16, total scaling dimension
 Delta_s = 2h = 5/8, quantum dimension sqrt2, 4-dimensional SO(5) multiplet
@@ -41,7 +41,7 @@ removes the velocity and Casimir offsets.
 - Twisted-sector ground-state degeneracy **2^floor(5/2) = 4 = SO(5) spinor dim**.
 
 This reproduces the in-session free-theory confirmation in committed, reproducible
-code, and is the prerequisite the handoff specifies ("Do not proceed until this
+code, and is the pre-registered prerequisite ("Do not proceed until this
 matches"). The twist + zero-mode-degeneracy machinery is validated end to end.
 
 **Why this already backs the paper's claim.** Delta_s = 5/8 is a universal datum
@@ -147,7 +147,7 @@ investment but was not rushed here.
 ## Decision
 
 - **Free-theory spinor (Delta_s = 5/8, degeneracy 4): CONFIRMED** in committed code
-  -- the paper's spinor claim stands, exactly as the handoff's decision rule allows
+  -- the paper's spinor claim stands, exactly as the pre-registered decision rule allows
   ("If Task C does not converge, the free-theory confirmation already in hand still
   backs the spinor-at-5/8 claim").
 - **Task A feasibility: the native-spinor route gives SU(4)_1 (c=3) at NN, not

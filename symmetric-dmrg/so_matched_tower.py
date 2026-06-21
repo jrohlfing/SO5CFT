@@ -1,9 +1,9 @@
 """Matched SO(5)_1 (n=5, odd) vs Spin(4)_1 (n=4, even) entanglement-tower
-comparison -- Deliverables A and B of the Staedert "Real Result" handoff.
+comparison.
 
 Reads the charge-resolved entanglement spectra produced by the SAME pipeline:
   n=5: so5sym_*.json  (es_mid_by_charge, committed)
-  n=4: so4_L*_chi*.json (es_mid_by_charge, this handoff)
+  n=4: so4_L*_chi*.json (es_mid_by_charge)
 
 Deliverable A -- matched tower:
   - group the half-cut entanglement spectrum into shells (levels equal within a

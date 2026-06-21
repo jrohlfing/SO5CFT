@@ -4,7 +4,7 @@ This is the symmetric counterpart of so5-primary/scripts/so5_bbq_dmrg.py. The
 prior (non-symmetric) campaign used LegCharge.from_trivial(5) and watched the
 extracted central charge drift downward from c~2.1 to c~1.48 (smoothed) as L
 grew -- the truncation at finite chi splits the SO(5)_1 entanglement
-degeneracies because nothing protects them. The fix (Staedert handoff): impose
+degeneracies because nothing protects them. The fix: impose
 the two abelian Cartan U(1) charges of SO(5) so the degeneracies are protected by
 construction.
 
@@ -43,7 +43,7 @@ import os
 import time
 from pathlib import Path
 
-THREADS = int(os.environ.get("STAEDERT_THREADS_PER_WORKER", "30"))
+THREADS = int(os.environ.get("DMRG_THREADS_PER_WORKER", "30"))
 for _v in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS",
            "VECLIB_MAXIMUM_THREADS", "NUMEXPR_NUM_THREADS"):
     os.environ[_v] = str(THREADS)

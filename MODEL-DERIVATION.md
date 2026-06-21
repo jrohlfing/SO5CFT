@@ -4,7 +4,7 @@ This note is committed **before** any numerics so the candidate Hamiltonian is
 on record independently of what the instrument returns. It states the lattice
 model, its symmetry generators, the free-point central charge, the primary
 content, and — critically — an honest account of what an interaction can and
-cannot do. It also flags one place where the handoff's framing is, on the
+cannot do. It also flags one framing that is, on the
 rigorous CFT side, imprecise, and resolves it.
 
 ## 0. Target
@@ -66,7 +66,7 @@ is the symmetry the target rests on.
 
 ## 2. Honest statement of the subtlety (this is the crux)
 
-The handoff (Section 3b) writes "five free Majoranas have c = 5/2 but are NOT
+One framing to avoid writes "five free Majoranas have c = 5/2 but are NOT
 SO(5)_1 (they are five copies of Ising)." The precise statement is sharper and
 worth getting exactly right, because a referee will:
 
@@ -98,7 +98,7 @@ the five `ε_a` form the SO(5) vector.
   not a single-chain σ, and we explicitly note in the results that the
   unprojected lattice `Ising^5` *also* contains lower operators (single σ at
   Δ = 1/8) that are not SO(5)_1 primaries. Reporting otherwise would be the
-  exact error the handoff warns against.
+  exact error to avoid.
 
 ## 3. The free point and the entanglement instrument
 

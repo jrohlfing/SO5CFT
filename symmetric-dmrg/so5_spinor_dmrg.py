@@ -1,5 +1,5 @@
 """SO(5) = Sp(4) chain in the 4-dim SPINOR (Sp(4)-fundamental) representation --
-charge-conserving DMRG. Task A of the spinor-sector handoff: feasibility benchmark.
+charge-conserving DMRG. Spinor-sector feasibility benchmark.
 
 Unlike the 5-dim VECTOR chain (integer Cartan weights, cannot expose the spinor
 in its entanglement spectrum), the spinor site carries HALF-INTEGER Cartan weights
@@ -33,7 +33,7 @@ import os
 import time
 from pathlib import Path
 
-THREADS = int(os.environ.get("STAEDERT_THREADS_PER_WORKER", "16"))
+THREADS = int(os.environ.get("DMRG_THREADS_PER_WORKER", "16"))
 for _v in ("OMP_NUM_THREADS", "MKL_NUM_THREADS", "OPENBLAS_NUM_THREADS",
            "VECLIB_MAXIMUM_THREADS", "NUMEXPR_NUM_THREADS"):
     os.environ[_v] = str(THREADS)

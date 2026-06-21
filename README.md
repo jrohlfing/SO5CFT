@@ -2,8 +2,8 @@
 
 Reproduction code and numerical results for the coupled-Majorana-chain
 realization of the SO(5)$_1$ Wess-Zumino-Witten model, supporting the
-lattice section of the manuscript *Quantum Kinematics from the Configuration
-Substrate: An SO(5)$_1$ Boundary and Its Unpaired Mode* (J. Rohlfing).
+lattice section of the manuscript *A Parity Signature Distinguishing SO(5)$_1$
+from Spin(4)$_1$ Boundaries* (J. Rohlfing).
 
 This repository contains only the lattice computations referenced in the
 data-availability statement of that paper.
@@ -61,7 +61,7 @@ See `symmetric-dmrg/REPORT-matched-tower.md` and
 models/        Hamiltonians: so5_majorana.py (+ TFIM, Potts-3, XX, classical controls)
 analysis/      run_so5.py, run_so5_phase.py (drivers); c_eff.py, dmrg_parallel.py
 results/so5/   results_so5.json, gap_ratio_table.csv, phase/ (minE grids, results_phase.json)
-figures/       fig1.png, fig2.png, make_figs.py (regenerates both from results/)
+figures/       fig1.png, fig2.png, fig3.png, make_figs.py (regenerates all three from results/)
 symmetric-dmrg/  SO(5)-symmetric BBQ DMRG: matched SO(5)/Spin(4) tower + spinor sector
                  (code, results/*.json, REPORT-matched-tower.md, REPORT-spinor-sector.md)
 MODEL-DERIVATION.md     exact Hamiltonian, SO(5) generators, pre-registered targets
@@ -75,7 +75,7 @@ RESULTS-SO5-PHASE.md    the (mu,w) phase scan
 pip install -r requirements.txt
 python -m analysis.run_so5          # tests 1-3, writes results/so5/results_so5.json
 python -m analysis.run_so5_phase    # phase scan, writes results/so5/phase/
-python figures/make_figs.py         # regenerates fig1.png, fig2.png from results/
+python figures/make_figs.py         # regenerates fig1.png, fig2.png, fig3.png from results/
 ```
 
 The committed `results/` JSON and CSV files are the outputs used in the paper;
